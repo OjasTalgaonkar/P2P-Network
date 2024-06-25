@@ -1,0 +1,3 @@
+[submodule "BlockChainGO"]
+	path = BlockChainGO
+	url = https://github.com/OjasTalgaonkar/BlockChainGO.git
