@@ -42,3 +42,19 @@ func establish_connection(peer *Peer, knownPeer Peer) {
 		peer.IP, peer.port, knownPeer.IP, knownPeer.port)
 
 }
+
+func (peer *Peer) connect_to_peers() {
+	for _, knownPeer := range peer.known_peers {
+		if !is_connected(peer, knownPeer) {
+			establish_connection(peer, knownPeer)
+		}
+	}
+}
+
+// --------------------Data exchange functions------------------------
+
+func (sender *Peer) send_message(data string, reciever Peer) {
+	if is_connected(sender, reciever) {
+
+	}
+}
